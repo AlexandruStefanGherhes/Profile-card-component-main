@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-cyan: hsl(229, 23%, 23%);
+  --dark-greyish-blue: hsl(227, 10%, 46%);
+
+  --font: "Kumbh Sans";
+}
+
+body {
+  background: var(--dark-cyan);
+  padding: 20px;
+}
+
+article {
+  margin: 50% auto;
+  max-width: 355px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+}
+
+.background {
+  background: url(/images/bg-pattern-card.svg);
+  height: 130px;
+  max-width: 375px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+h2 {
+  font-family: var(--font);
+  color: var(--very-dark-cyan);
+  font-size: 20px;
+}
+
+article > p:first-of-type {
+  font-weight: 100;
+  color: var(--dark-greyish-blue);
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font);
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  margin: 25px 0px;
+  font-size: 18px;
+}
+
+p > span {
+  margin-top: 5px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+span {
+  color: var(--dark-greyish-blue);
+  font-weight: 100;
+}
+
+.footer::before {
+  content: "";
+  width: 100%;
+  border-bottom: solid 1px lightgray;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+img {
+  border-radius: 50%;
+  border: 5px solid white;
+  margin: 0 auto;
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-image: url(/images/bg-pattern-top.svg),
+      url(/images/bg-pattern-bottom.svg);
+    background-position: top -320px left -330px, bottom -450px right -250px;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  article {
+    margin: 300px auto;
+  }
+}
