@@ -63,7 +63,7 @@ article {
 }
 
 .background {
-  background: url(images/bg-pattern-card.svg);
+  background: url(/Profile-card-component-main/images/bg-pattern-card.svg);
   height: 130px;
   max-width: 375px;
   border-radius: 10px 10px 0px 0px;
@@ -129,8 +129,8 @@ img {
 
 @media (min-width: 1440px) {
   body {
-    background-image: url(/images/bg-pattern-top.svg),
-      url(/images/bg-pattern-bottom.svg);
+    background-image: url(/Profile-card-component-main/images/bg-pattern-top.svg),
+      url(/Profile-card-component-main/images/bg-pattern-bottom.svg);
     background-position: top -320px left -330px, bottom -450px right -250px;
     background-repeat: no-repeat, no-repeat;
   }
