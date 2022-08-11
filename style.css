@@ -52,10 +52,42 @@ h6 {
 body {
   background: var(--dark-cyan);
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(./images/bg-pattern-top.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url(./images/bg-pattern-bottom.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 article {
-  margin: 50% auto;
   max-width: 355px;
   border-radius: 10px;
   text-align: center;
@@ -63,22 +95,34 @@ article {
 }
 
 .background {
-  background: url(/Profile-card-component-main/images/bg-pattern-card.svg);
+  background: url(./images/bg-pattern-card.svg);
   height: 130px;
-  max-width: 375px;
+  /* max-width: 375px; */
   border-radius: 10px 10px 0px 0px;
+  position: relative;
+  padding: 1rem;
+}
+
+.background img {
+  width: 30%;
+  position: absolute;
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .footer {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem 2rem;
 }
 
 h2 {
   font-family: var(--font);
   color: var(--very-dark-cyan);
   font-size: 20px;
+  margin-block-start: 2rem;
 }
 
 article > p:first-of-type {
@@ -122,20 +166,5 @@ span {
 img {
   border-radius: 50%;
   border: 5px solid white;
-  margin: 0 auto;
-  margin-top: -50px;
   margin-bottom: 20px;
-}
-
-@media (min-width: 1440px) {
-  body {
-    background-image: url(/Profile-card-component-main/images/bg-pattern-top.svg),
-      url(/Profile-card-component-main/images/bg-pattern-bottom.svg);
-    background-position: top -320px left -330px, bottom -450px right -250px;
-    background-repeat: no-repeat, no-repeat;
-  }
-
-  article {
-    margin: 300px auto;
-  }
 }
