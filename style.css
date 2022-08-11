@@ -63,7 +63,7 @@ article {
 }
 
 .background {
-  background: url(/images/bg-pattern-card.svg);
+  background: url(images/bg-pattern-card.svg);
   height: 130px;
   max-width: 375px;
   border-radius: 10px 10px 0px 0px;
